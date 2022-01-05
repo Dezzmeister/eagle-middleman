@@ -1,0 +1,17 @@
+{
+  "name": "eagle-middleman",
+  "version": "1.0.0",
+  "description": "Forwards requests from obama69.com to BC. Must be connected to eaglevpn.bc.edu.",
+  "main": "app.js",
+  "author": "Joe Desmond",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "request": "^2.88.2"
+  }
+}
