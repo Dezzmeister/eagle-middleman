@@ -23,7 +23,11 @@ async function main() {
     app.get('/', (req, res) => {
         const dest = req.headers['x-destination'];
         console.log(`Forwarding request to '${dest}' for '${req.ip}'`);
-        req.pipe(request(dest)).pipe(res);
+        try {
+            req.pipe(request(dest)).pipe(res);
+        } catch (e) {
+            res.send(e);
+        }
     });
 
     app.listen(process.env.PORT, () => {
